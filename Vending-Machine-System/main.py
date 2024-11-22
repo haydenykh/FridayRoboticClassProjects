@@ -46,6 +46,7 @@ items = {
     }
 }
 
+# Formats the array by joining commas
 def format_array(array: list):
     l = ", ".join(array)
     return l
@@ -65,6 +66,7 @@ def print_available_items():
         get_user_confirmation()
     return si
 
+# Gets the user's confirmation
 def get_user_confirmation():
     confirmation = input(f"\033[31;3m[Step 2] Is the item you selected \033[1mcorrect\033[0;31m?\033[0m\n{format_array(user_items)}\n\033[92;1m[Yes]\033[0m or \033[91;1m[No]\033[0m:\n")
     if re.match("Yes", confirmation):
@@ -77,6 +79,7 @@ def get_user_confirmation():
         print(f"\n\033[1;31m[!] \"{confirmation}\" is an invalid selection. Please try again.\033[0m")
         get_user_confirmation()
 
+# Gets the user's retry confirmation
 def get_user_retry_confirmation():
     retry_confirmation = input(f"\033[31;3m[Step 3] Are you finished with shopping?\nIf typed \"Yes\", you will be checked out with a receipt.\033[0m\n\033[92;1m[Yes]\033[31;0m or \033[91;1m[No]\033[0m:\n")
     if re.match("Yes", retry_confirmation):
@@ -84,6 +87,7 @@ def get_user_retry_confirmation():
         print_receipt()
         exit()
 
+# Prints the receipt
 def print_receipt():
     print("\033[1;34mShopping Receipt:\033[0m")
 
