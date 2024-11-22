@@ -1,0 +1,22 @@
+[
+    {
+        "user": "Donald Trump",
+        "balance": 2000000,
+        "transactions": [
+            {
+                "type": "Withdrawal",
+                "amount": 200
+            }
+        ]
+    },
+    {
+        "user": "Kamala Harris",
+        "balance": 2000200,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 200
+            }
+        ]
+    }
+]
