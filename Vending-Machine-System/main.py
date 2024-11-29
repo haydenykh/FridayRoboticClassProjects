@@ -92,6 +92,9 @@ def get_user_retry_confirmation():
         exit()
     elif re.match("No", retry_confirmation, re.IGNORECASE):
         print_available_items()
+    else:
+        print(f"\n\033[1;31m[!] \"{retry_confirmation}\" is an invalid selection. Please try again.\033[0m")
+        get_user_retry_confirmation()
 
 # Prints the receipt
 def print_receipt():
