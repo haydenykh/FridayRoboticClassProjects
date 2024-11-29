@@ -60,7 +60,7 @@ def print_available_items():
 
     selected_item = None
     for item_id, item_info in items.items():
-        if str(item_info['index']) == si:
+        if str(item_info["index"]) == si:
             selected_item = item_id
             break
 
@@ -100,7 +100,7 @@ def print_receipt():
     tp = 0
     for item_id in user_items:
         item = items[item_id]
-        tp += item['price']
+        tp += item["price"]
         print(f"• {item['name']} - RM {item['price']}0")
     print("\033[1;33mTotal Price: RM {:.2f}\033[0m".format(tp))
 
